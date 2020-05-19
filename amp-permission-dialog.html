@@ -5,7 +5,8 @@
 
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans+Condensed:wght@800&display=swap" rel="stylesheet">
   <!-- Do not edit styles in this section -->
   <style builtin>
     /* Do not edit styles in this section. Add custom styles in the next
@@ -14,6 +15,9 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      font-family: "Catamaran", sans-serif;
+      color: #3C383A;
+      background-color: #ECFFFF;
     }
 
     /* Default loading spinner */
@@ -28,10 +32,10 @@
       font-size: 10px;
       position: relative;
       text-indent: -9999em;
-      border-top: 1.1em solid rgba(140, 140, 140, 0.2);
-      border-right: 1.1em solid rgba(140, 140, 140, 0.2);
-      border-bottom: 1.1em solid rgba(140, 140, 140, 0.2);
-      border-left: 1.1em solid rgb(140, 140, 140);
+      border-top: 1.1em solid rgba(57, 223, 187, 0.2);
+      border-right: 1.1em solid rgba(57, 223, 187, 0.2);
+      border-bottom: 1.1em solid rgba(57, 223, 187, 0.2);
+      border-left: 1.1em solid rgb(57, 223, 187);
       -webkit-transform: translateZ(0);
       -ms-transform: translateZ(0);
       transform: translateZ(0);
@@ -70,8 +74,25 @@
     /* Page message text styles */
     .message {
       font-size: 22px;
-      font-family: sans-serif;
       text-align: center;
+    }
+
+    .sub-branding {
+      color: #e8562a;
+    }
+
+    .branding {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .branding > a {
+      color: #39dfbb;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
     }
 
     /* Close icon styles */
@@ -124,7 +145,7 @@
         Customize the subscribing message here
             (e.g. "Click Allow to receive notifications")
         -->
-        Click Allow to receive notifications.
+        Click on <span class='sub-branding'>Allow</span> in the prompt to receive notifications from this website.
       </p>
     </div>
     <div permission="denied">
@@ -134,9 +155,12 @@
                     to receive notifications from this website.")
         -->
       <p class="message">
-        Please unblock notifications in your browser settings to receive notifications from this website.
+        Please <span class='sub-branding'>unblock</span> notifications in your browser settings to receive notifications from this website.
       </p>
     </div>
+  </div>
+  <div class="branding">
+    Powered by <a href="https://subscribers.com?utm_medium=amp-dialog-prompt" target="_blank">Subscribers</a>
   </div>
   <script>(function(){var f;function h(a){for(var b=["object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global,a],d=0;d<b.length;++d){var c=b[d];if(c&&c.Math==Math)return c}return function(){throw Error("Cannot find global object");}()}var k=h(this);function l(a,b){b=void 0===b?"":b;try{return decodeURIComponent(a)}catch(d){return b}};var m=/(?:^[#?]?|&)([^=&]+)(?:=([^&]*))?/g;self.__AMP_LOG=self.__AMP_LOG||{user:null,dev:null,userForEmbed:null};var n=self.__AMP_LOG;/*
  https://mths.be/cssescape v1.5.1 by @mathias | MIT license */

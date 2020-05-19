@@ -551,7 +551,8 @@
                     var n = e
                         .transaction(['user'], 'readwrite')
                         .objectStore('user')
-                    n.get('web-push').onsuccess = function() {
+                    n.get('web-push').onsuccess = function(result) {
+                        if (result.target.result) { return }
                         var t = { id: 'web-push' }
                         ;(t.subscriber_uuid = setUUID()),
                             (t.metaData = clientData()),
